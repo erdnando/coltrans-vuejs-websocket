@@ -7,8 +7,8 @@ import io from 'socket.io-client';
 
 Vue.config.productionTip = false;
 
-//const socket = io('http://192.168.0.4');
-const socket = io(process.env.websocket_host);
+const socket = io('http://192.168.0.4');
+//const socket = io(process.env.websocket_host);
 
 
 Vue.use(VueSocketIOExt, socket, { store });
