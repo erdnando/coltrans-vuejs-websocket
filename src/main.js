@@ -7,7 +7,7 @@ import io from 'socket.io-client';
 
 Vue.config.productionTip = false;
 
-const socket = io('http://proxy-ha');
+const socket = io('http://coltrans');
 
 Vue.use(VueSocketIOExt, socket, { store });
 
