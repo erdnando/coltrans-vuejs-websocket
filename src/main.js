@@ -7,7 +7,7 @@ import io from 'socket.io-client';
 
 Vue.config.productionTip = false;
 
-const socket = io('http://coltrans');
+const socket = io('http://192.168.0.4');
 //const socket = io('http://localhost:9001');
 
 Vue.use(VueSocketIOExt, socket, { store });
