@@ -52,11 +52,11 @@ export default {
        this.$socket.client.emit('login',{email:this.$store.state.session.email});
     },
      incrementarEvent: function(message) {
-        this.$socket.client.emit('incrementar',{counter:this.$store.state.contadorGeneral});
+        this.$socket.client.emit('incrementar',{counter:this.$store.state.contadorGeneral,uuid:this.$store.state.session.email});
         //show message about this request or a loading efect
     },
      decrementarEvent: function(message) {
-         this.$socket.client.emit('decrementar',{counter:this.$store.state.contadorGeneral});
+         this.$socket.client.emit('decrementar',{counter:this.$store.state.contadorGeneral,uuid:this.$store.state.session.email});
          //show message about this request or a loading efect
     },
   },
