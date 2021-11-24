@@ -30,3 +30,4 @@ following command:
 $ screen -r
 
 ### Prepare jenkins file
+Now we can test on it
