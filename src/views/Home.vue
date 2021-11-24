@@ -56,7 +56,7 @@ export default {
         //show message about this request or a loading efect
     },
      decrementarEvent: function(message) {
-         this.$socket.client.emit('decrementar');
+         this.$socket.client.emit('decrementar',{counter:this.$store.state.contadorGeneral});
          //show message about this request or a loading efect
     },
   },
