@@ -28,3 +28,5 @@ the server, to see the server output, we can attach back to the screen by using 
 
 following command:
 $ screen -r
+
+### Prepare jenkins file
