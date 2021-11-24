@@ -44,7 +44,7 @@ export default {
   },
   data: function(){
     return {
-      msgError:'',
+      msgError:''
     }
   },
   methods: {
@@ -52,7 +52,7 @@ export default {
        this.$socket.client.emit('login',{email:this.$store.state.session.email});
     },
      incrementarEvent: function(message) {
-        this.$socket.client.emit('incrementar',{counter:0});
+        this.$socket.client.emit('incrementar',{counter:this.$store.state.contadorGeneral});
         //show message about this request or a loading efect
     },
      decrementarEvent: function(message) {
