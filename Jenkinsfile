@@ -12,7 +12,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 sh 'docker build -t erdnando/coltrans-websocket-server:1.0 .'
-                echo 'DockerBuild OK'
+                echo 'DockerBuild OK...'
             }
             
         }
