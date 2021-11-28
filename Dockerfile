@@ -22,7 +22,7 @@ COPY --from=builder /opt/vue_app/dist/ /usr/share/nginx/html/coltrans-vuejs-webs
 #docker run -itd -p 8080:8080 --net=host --name coltrans-vuejs-websocket erdnando/coltrans-vuejs-websocket:1.0
 #push
 #docker push erdnando/coltrans-vuejs-websocket:1.0
-#------------------------
+#------------------------ --------------------
 
 
 EXPOSE 8080
