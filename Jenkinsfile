@@ -1,6 +1,8 @@
 pipeline{
     
-    agent any
+    agent{
+      label 'slave'
+    }
     stages{
         stage('Get surce from GIT'){
             steps{
