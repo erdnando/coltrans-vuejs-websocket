@@ -18,7 +18,10 @@ pipeline{
             
         }
         stage('Publish to DockerHub'){
-            sh 'docker push erdnando/coltrans-vuejs-websocket:1.0'
+            steps{
+                 sh 'docker push erdnando/coltrans-vuejs-websocket:1.0'
+            }
+          
         }
         
         
