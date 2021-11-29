@@ -5,13 +5,13 @@ pipeline{
         stage('Get surce from GIT'){
             steps{
                // Get some code from a GitHub repository...
-               git 'https://github.com/erdnando/coltrans-vuejs-websocket.git'
+               sh 'git clone https://github.com/erdnando/coltrans-vuejs-websocket.git /opt/vue_app'
                echo 'Descarga OK'
             }
          }
         stage('Build docker image'){
             steps{
-                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /var/jenkins_home/workspace/pipeline-frontend-vue/Dockerfile'
+                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /opt/vue_app/Dockerfile'
                 echo 'DockerBuild OK...'
             }
             
