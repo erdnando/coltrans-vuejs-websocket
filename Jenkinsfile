@@ -11,7 +11,7 @@ pipeline{
          }
         stage('Build docker image'){
             steps{
-                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /opt/vue_app/Dockerfile'
+                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /opt/vue_app/.'
                 echo 'DockerBuild OK...'
             }
             
