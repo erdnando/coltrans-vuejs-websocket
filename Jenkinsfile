@@ -11,7 +11,7 @@ pipeline{
          }
         stage('Build docker image'){
             steps{
-                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 .'
+                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /var/jenkins_home/workspace/pipeline-frontend-vue/Dockerfile'
                 echo 'DockerBuild OK...'
             }
             
