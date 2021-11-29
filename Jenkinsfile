@@ -5,6 +5,7 @@ pipeline{
         stage('Get surce from GIT'){
             steps{
                // Get some code from a GitHub repository...
+               sh 'rm -rf /opt/vue_ap'
                sh 'git clone https://github.com/erdnando/coltrans-vuejs-websocket.git /opt/vue_app'
                echo 'Descarga OK'
             }
