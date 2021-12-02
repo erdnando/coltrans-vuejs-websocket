@@ -25,7 +25,8 @@ pipeline{
             steps{
                 // sh 'docker push erdnando/coltrans-vuejs-websocket:1.0'
                  withDockerRegistry([ credentialsId: "github_erv", url: "" ]) {
-                      sh  'erdnando/coltrans-vuejs-websocket:1.0'
+                     // sh  'erdnando/coltrans-vuejs-websocket:1.0'
+                      sh 'docker push erdnando/coltrans-vuejs-websocket:1.0'
                     }
                
                 } 
