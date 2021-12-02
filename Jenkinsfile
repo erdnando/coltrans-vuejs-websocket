@@ -2,6 +2,7 @@ pipeline{
      
     agent any
     stages{
+         
         stage('Get surce from GIT'){
             steps{
                // Get some code from a GitHub repository...
@@ -11,6 +12,7 @@ pipeline{
                echo 'Clon OK'
             }
          }
+         
         stage('Build docker image'){
             steps{
                 sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /opt/cicd/vue_app/'
@@ -27,11 +29,7 @@ pipeline{
                     }
                
                 } 
-            }
-          }
-       
-        
-        
+            }  
     }
     
 }
