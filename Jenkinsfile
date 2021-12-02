@@ -6,13 +6,13 @@ pipeline{
             steps{
                // Get some code from a GitHub repository...
                sh 'rm -rf /opt/vue_app'
-               sh 'git clone https://github.com/erdnando/coltrans-vuejs-websocket.git /opt/vue_app'
+               sh 'git clone https://github.com/erdnando/coltrans-vuejs-websocket.git /opt/cicd/vue_app'
                echo 'Descarga OK'
             }
          }
         stage('Build docker image'){
             steps{
-                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /opt/vue_app/'
+                sh 'docker build -t erdnando/coltrans-websocket-server:1.0 /opt/cicd/vue_app/'
                 echo 'DockerBuild OK...'
             }
             
