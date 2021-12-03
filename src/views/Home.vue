@@ -17,7 +17,7 @@
    </table>
    <div v-else>
      <br><br>
-     <label style="font-size:30px">Ingrese su email para acceder ala demo:</label>
+     <label style="font-size:30px">Ingrese su email para acceder a la demo:</label>
       <br><br>
       <input type=text v-model="$store.state.session.email" placeholder="email@domain.com" />
       <br><br><br>
