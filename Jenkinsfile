@@ -6,7 +6,7 @@ pipeline{
         stage('Get surce from GIT'){
             steps{
                // Get some code from a GitHub repository...
-                
+               //This path must exists on jenkins server
                sh 'rm -rf /opt/cicd/vue_app'
                sh 'git clone https://github.com/erdnando/coltrans-vuejs-websocket.git /opt/cicd/vue_app'
                echo 'Clon OK'
@@ -23,9 +23,7 @@ pipeline{
         
          stage('Publish to DockerHub'){
             steps{
-                // sh 'docker push erdnando/coltrans-vuejs-websocket:1.0'
                  withDockerRegistry([ credentialsId: "github_erv", url: "" ]) {
-                     // sh  'erdnando/coltrans-vuejs-websocket:1.0'
                       sh 'docker push erdnando/coltrans-vuejs-websocket:1.0'
                     }
                
